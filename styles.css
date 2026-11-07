@@ -1,0 +1,173 @@
+/* ==========================================================
+   WEBBY & WEBTOONS — styles.css (shared by every page)
+   Mobile-first: base styles = phone, media queries add more.
+   ========================================================== */
+
+/* 1. RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+
+/* 2. COLOURS + FONTS (3 main colours: plum, pink, lavender + white) */
+:root {
+  --text: #3E2152;
+  --heading: #5A2468;
+  --pink: #FFDDEC;
+  --lavender: #E6DAFF;
+  --white: #FFFFFF;
+  --accent: #C94781;
+  --accent-dark: #A82F65;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Quicksand', Arial, sans-serif;
+}
+
+/* 3. BASE TYPOGRAPHY */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.6;
+  background: #FBE9EF url("images/background.jpeg") center / cover fixed;
+}
+h1, h2, h3 { font-family: var(--font-heading); color: var(--heading); line-height: 1.2; margin-bottom: 8px; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+p { margin-bottom: 12px; }
+ul, ol { padding-left: 22px; margin-bottom: 12px; }
+
+/* 4. LINKS (order: link, visited, hover, focus, active) */
+a:link    { color: var(--accent-dark); }
+a:visited { color: var(--heading); }
+a:hover   { color: var(--accent); text-decoration: underline; }
+a:focus   { outline: 3px solid var(--heading); outline-offset: 2px; }
+a:active  { color: var(--text); }
+
+/* 5. HEADER + NAV (Flexbox) — column on phones, row on tablets+ */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--pink);
+  border-bottom: 3px solid var(--lavender);
+}
+.logo:link, .logo:visited {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-decoration: none;
+}
+.nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.nav-links a { padding: 6px 14px; border-radius: 20px; font-weight: 700; text-decoration: none; }
+.nav-links a:link    { color: var(--heading); }
+.nav-links a:visited { color: var(--heading); }
+.nav-links a:hover   { background: var(--white); color: var(--accent-dark); }
+.nav-links a:focus   { outline: 3px solid var(--heading); outline-offset: 2px; }
+.nav-links a:active  { background: var(--lavender); }
+
+/* 6. PAGE LAYOUT */
+main { max-width: 1000px; margin: 0 auto; padding: 16px; }
+.card {
+  background: var(--white);
+  border: 2px solid var(--lavender);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.pink { background: var(--pink); }
+.lavender { background: var(--lavender); }
+.white { background: var(--white); }
+.center { text-align: center; }
+
+/* CSS Grid sections: 1 column on phones, more columns on bigger screens */
+.grid { display: grid; gap: 16px; margin-bottom: 16px; }
+.grid .card { margin-bottom: 0; }
+.stack { display: grid; gap: 16px; align-content: start; }
+
+/* 7. HERO (Flexbox centred) + BUTTONS */
+.hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px; }
+.hero-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid var(--accent-dark);
+  border-radius: 24px;
+  background: var(--accent-dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.btn, .btn:link, .btn:visited { color: var(--white); text-decoration: none; }
+.btn:hover  { background: var(--heading); border-color: var(--heading); color: var(--white); text-decoration: none; }
+.btn:focus  { outline: 3px solid var(--heading); outline-offset: 3px; }
+.btn:active { background: var(--accent); }
+.btn-outline, .btn-outline:link, .btn-outline:visited { background: var(--white); border-color: var(--heading); color: var(--heading); }
+.btn-outline:hover { background: var(--heading); color: var(--white); }
+
+/* 8. LISTS + TAGS */
+.plain-list { list-style: none; padding: 0; }
+.plain-list li { padding: 8px 0; border-bottom: 1px dashed var(--heading); }
+.plain-list li:last-child { border-bottom: none; }
+.list-row { display: flex; justify-content: space-between; gap: 8px; }
+.tag { padding: 1px 10px; border-radius: 12px; background: var(--lavender); font-size: 0.8rem; font-weight: 700; }
+.stars { color: var(--accent-dark); white-space: nowrap; }
+
+/* 9. TABLES (border-collapse + zebra striping) */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 8px 10px; border: 1px solid var(--lavender); }
+th { background: var(--heading); color: var(--white); }
+tbody tr:nth-child(even) { background: var(--pink); }
+
+/* 10. IMAGES (object-fit + border-radius) */
+.photo { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 4px solid var(--white); border-radius: 12px; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.feature { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.feature .photo { max-width: 200px; }
+summary { cursor: pointer; font-weight: 700; color: var(--heading); }
+
+/* 11. FORMS */
+label { display: block; font-weight: 700; margin-bottom: 4px; }
+input, select, textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border: 2px solid var(--heading);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+}
+input:focus, select:focus, textarea:focus { outline: 3px solid var(--accent); outline-offset: 1px; }
+input[type="radio"], input[type="checkbox"] { width: auto; margin: 0 6px 0 0; }
+fieldset { margin-bottom: 12px; padding: 10px 14px; border: 2px solid var(--heading); border-radius: 8px; }
+fieldset label, .checkbox-label { font-weight: 500; }
+.row { display: grid; gap: 0 12px; margin-bottom: 10px; padding: 12px 12px 0; border-radius: 8px; background: var(--white); }
+.add-box { margin-top: 12px; padding-top: 12px; border-top: 2px dashed var(--heading); }
+.add-form { display: flex; flex-wrap: wrap; gap: 8px; }
+.add-form input, .add-form select { flex: 1 1 140px; width: auto; margin: 0; }
+.full { width: 100%; }
+
+/* 12. FOOTER */
+.site-footer { padding: 16px; background: var(--heading); text-align: center; }
+.site-footer p { margin: 0; color: var(--white); }
+
+/* 13. RESPONSIVE BREAKPOINTS (mobile-first: min-width) */
+@media (min-width: 768px) {
+  h1 { font-size: 2.4rem; }
+  .navbar { flex-direction: row; justify-content: space-between; }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .wide { grid-column: 1 / -1; }
+  .row { grid-template-columns: 2fr 1fr 1fr; }
+  .feature { flex-direction: row; text-align: left; }
+}
+@media (min-width: 1100px) {
+  h1 { font-size: 2.8rem; }
+  main { padding: 32px 16px; }
+  .hero { padding: 56px 20px; }
+}
