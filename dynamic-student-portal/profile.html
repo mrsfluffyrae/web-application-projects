@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Profile - Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body data-page="profile">
+  <header class="site-header">
+    <a class="brand" href="index.html">Student Portal</a>
+    <nav aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="profile.html" aria-current="page">Profile</a>
+      <a href="courses.html">Courses</a>
+      <a href="grades.html">Grades</a>
+    </nav>
+    <div class="tools">
+      <button class="btn" id="theme-toggle" type="button">Dark mode</button>
+      <button class="btn" id="sign-out" type="button">Sign out</button>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Student Profile</h1>
+    <p class="muted" id="p-sub"></p>
+    <div class="profile-head"><div class="avatar" id="avatar" aria-hidden="true"></div><div><h2 id="p-name"></h2><p id="p-bio" class="muted"></p></div></div>
+    <dl class="details" id="p-details"></dl>
+    <h2>Edit Details</h2>
+    <form class="form" id="profile-form" novalidate style="margin-top:var(--s3)">
+      <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"><p class="error" id="name-error"></p></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"><p class="error" id="phone-error"></p></div>
+      <div class="field"><label for="bio">Bio</label><textarea id="bio" name="bio" rows="3"></textarea></div>
+      <div><button class="btn btn-primary" type="submit">Save Changes</button></div>
+      <p class="saved" id="saved" role="status"></p>
+    </form>
+  </main>
+  <footer class="site-footer">&copy; 2026 Dynamic Student Portal</footer>
+  <script src="js/portal-data.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/grade-calc.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

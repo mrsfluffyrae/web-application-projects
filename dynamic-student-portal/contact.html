@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Recommend Me — Webby &amp; Webtoons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">🌸 Webby &amp; Webtoons</a>
+      <ul class="nav-links">
+        <li><a href="index.html">🏡 Home</a></li>
+        <li><a href="library.html">📚 Library</a></li>
+        <li><a href="about.html">🔍 Discover</a></li>
+        <li><a href="contact.html">💌 Contact &amp; Recommend Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card pink center">
+      <h1>💌 Tell Us What You Love</h1>
+      <p>A few tiny questions and we'll hand you your next obsession.</p>
+    </section>
+
+    <div class="grid grid-2">
+      <form class="card lavender" action="mailto:yuesilo100@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Aiko" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="aiko@example.com" required>
+
+        <label for="genre">Favourite genre</label>
+        <select id="genre" name="genre">
+          <option value="">Choose one…</option>
+          <option value="romance">Romance</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="thriller">Thriller</option>
+          <option value="slice">Slice of Life</option>
+          <option value="scifi">Sci-Fi</option>
+        </select>
+
+        <fieldset>
+          <legend>How much time do you have?</legend>
+          <label><input type="radio" name="time" value="hour"> Just an hour 🕐</label>
+          <label><input type="radio" name="time" value="weekend"> A whole weekend ☕</label>
+          <label><input type="radio" name="time" value="life"> My entire life 🌙</label>
+        </fieldset>
+
+        <label class="checkbox-label"><input type="checkbox" name="completed" value="yes"> Only recommend completed series</label>
+
+        <label for="notes">Anything else you love?</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="Slow burns? Morally grey characters? Lighthouses?"></textarea>
+
+        <button type="submit" class="btn full">💖 Send Me a Recommendation</button>
+      </form>
+
+      <div class="stack">
+        <aside class="card white">
+          <h2>📬 What happens next?</h2>
+          <p>We read every note and reply with a pick that fits your mood.</p>
+        </aside>
+        <aside class="card pink">
+          <h2>🕯️ Tiny tip</h2>
+          <p>The more specific you are, the better the match. Tropes, moods, even the weather you like to read in!</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Webby &amp; Webtoons. All rights reserved. 🌸</p>
+  </footer>
+</body>
+</html>
