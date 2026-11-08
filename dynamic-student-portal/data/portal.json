@@ -1,0 +1,15 @@
+{"student":{"name":"Amina Wanjiru","reg":"SCT211-0042/2023","email":"amina.wanjiru@student.edu","program":"BSc Computer Science","year":3,"phone":"+254 712 345 678","bio":"Third-year student interested in web development and machine learning."},
+"maxCredits":24,
+"units":[
+{"code":"COMP310","title":"Web Application Development","hall":"Computer Lab 3","day":"Mon","start":"08:00","end":"10:00","credits":4,"score":78},
+{"code":"COMP312","title":"Database Systems","hall":"Lecture Hall 2","day":"Mon","start":"11:00","end":"13:00","credits":3,"score":71},
+{"code":"COMP320","title":"Computer Networks","hall":"Lecture Hall 5","day":"Tue","start":"09:00","end":"11:00","credits":3,"score":64},
+{"code":"COMP331","title":"Machine Learning","hall":"Computer Lab 1","day":"Wed","start":"14:00","end":"17:00","credits":4,"score":82},
+{"code":"MATH305","title":"Applied Statistics","hall":"Lecture Hall 1","day":"Thu","start":"10:00","end":"12:00","credits":3,"score":58},
+{"code":"COMP340","title":"Software Engineering","hall":"Lecture Hall 4","day":"Fri","start":"09:00","end":"11:00","credits":3,"score":67}],
+"available":[
+{"code":"COMP350","title":"Mobile Application Development","hall":"Computer Lab 2","day":"Tue","start":"14:00","end":"16:00","credits":3,"score":null},
+{"code":"COMP360","title":"Cybersecurity Fundamentals","hall":"Lecture Hall 3","day":"Thu","start":"14:00","end":"16:00","credits":3,"score":null},
+{"code":"BUSN301","title":"Entrepreneurship","hall":"Lecture Hall 6","day":"Fri","start":"13:00","end":"15:00","credits":2,"score":null}],
+"semesters":[{"label":"Y1 S1","gpa":3.2,"credits":18},{"label":"Y1 S2","gpa":3.4,"credits":18},{"label":"Y2 S1","gpa":3.1,"credits":18},{"label":"Y2 S2","gpa":3.5,"credits":18},{"label":"Y3 S1","gpa":3.3,"credits":18}],
+"classmates":[{"name":"Brian Otieno","course":"BSc Computer Science","year":3},{"name":"Cynthia Njeri","course":"BSc Information Technology","year":3},{"name":"David Kiprop","course":"BSc Computer Science","year":2},{"name":"Esther Akinyi","course":"BSc Software Engineering","year":3},{"name":"Faith Mwangi","course":"BSc Computer Science","year":4}]}
