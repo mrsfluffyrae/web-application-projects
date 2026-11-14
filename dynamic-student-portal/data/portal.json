@@ -1,4 +1,4 @@
-{"student":{"name":"Amina Wanjiru","reg":"SCT211-0042/2023","email":"amina.wanjiru@student.edu","program":"BSc Computer Science","year":3,"phone":"+254 712 345 678","bio":"Third-year student interested in web development and machine learning."},
+{"student":{"name":"Amina Wanjiru","reg":"SCT211-0042/2023","email":"student@uni.ac.ke","program":"BSc Computer Science","year":3,"phone":"+254 712 345 678","bio":"Third-year student interested in web development and machine learning."},
 "maxCredits":24,
 "units":[
 {"code":"COMP310","title":"Web Application Development","hall":"Computer Lab 3","day":"Mon","start":"08:00","end":"10:00","credits":4,"score":78},

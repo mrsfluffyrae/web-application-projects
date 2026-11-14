@@ -21,7 +21,7 @@ function initLogin() {
   form.addEventListener('submit', e => {
     e.preventDefault();
     if (!validateLogin(form)) return;
-    if (form.elements.email.value.trim().toLowerCase() === 'amina.wanjiru@student.edu' && form.elements.password.value === 'portal123') {
+    if (form.elements.email.value.trim().toLowerCase() === 'student@uni.ac.ke' && form.elements.password.value === 'portal123') {
       Store.set('session', { email: form.elements.email.value }); location.href = 'index.html';
     } else document.getElementById('login-error').textContent = 'Email or password is incorrect.';
   });
@@ -55,7 +55,7 @@ function initDashboard(data) {
 }
 
 function initProfile(data) {
-  const s = Store.get('profile', data.student);
+  const s = Object.assign({}, data.student, Store.get('profile', {}), { email: data.student.email });
   const fill = () => {
     document.getElementById('p-name').textContent = s.name;
     document.getElementById('p-sub').textContent = `${s.program}, Year ${s.year}`;
